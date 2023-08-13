@@ -1,6 +1,15 @@
 //import logo from './logo.svg';
 //import './App.css';
+
 import './assets/css/style.css';
+
+// import your icons
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+// import your icons
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
 
 import revel from "./assets/images/revel.jpg";
 import srvices from "./assets/images/srvices.png";
