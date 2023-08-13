@@ -1,0 +1,1745 @@
+
+
+body{
+  /*background-color: red;*/
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+link[rel="icon"]{
+  color: red;
+}
+
+
+/************HEADER***********/
+
+.head{
+height: 100vh;
+/*background-color: red;*/
+
+}
+
+
+.head-1{
+height: 50vh;
+}
+.head-1-g{
+height: 100%;
+width: 100%;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.head-1-g::after{
+content: "";
+height:100%;
+width:100%;
+background-color: rgba(129, 236, 236,0.4);
+position: absolute;
+left: 0%;
+top:-5%;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 175px;
+}
+
+.head-1-g img{
+max-width: 90%;
+max-height: 78%;
+transition: transform .5s ease;
+transform-origin: center;
+object-fit: cover;
+transform: rotate(-90deg);
+}
+
+.head-1 .port{
+height: 50%;
+text-align: left;
+}
+.head-1-d{
+border: solid 1px #bdc3c7;
+padding: 5%;
+
+text-align: center;
+}
+.head-1-d h1{
+font-family: 'Fascinate', cursive;
+}
+.head-1-d-p{
+padding: 5%;
+height: 50%;
+}
+.head-1-d h6 span{
+border-bottom: dashed 2px #777;
+padding-bottom: 3px;
+}
+.head-1-d-p p{
+text-align:center;
+color:#bdc3c7 ;
+margin-top: -3%;
+}
+.head-1-d-t{
+text-align: left;
+width: 100%;
+background-color: #f9ca24;
+margin-left: 0px;
+font-family: 'Fascinate', cursive;
+transform: rotate(-90deg);
+}
+
+
+.head-2{
+height: 50vh;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.head-2 .l-menu{
+border-bottom: solid 0.5px #f1f2f6;
+width: 15%;
+height: 30%;
+text-align: center;
+}
+.l-menu:hover{
+border-bottom: solid 10px red;
+/*width: 5%;
+height: 50%;*/
+transition: 0.5s;
+border-radius: 10px;
+}
+
+.l-menu-h{
+border: dashed 1px #7efff5;
+border-radius: 100%;
+height: 70%;
+width: 70%;
+margin: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.l-menu-h:hover{
+border: none;
+background-color: #7efff5;
+transition: all .5s ease-in-out;
+}
+.l-menu-h:hover img{
+animation: menuanim .2s linear 2;
+-webkit-animation: menuanim .2s linear 2;
+}
+@keyframes menuanim {
+0%{margin-top: -0px;}
+50%{margin-top: -50px;}
+100%{margin-top: -100px;}
+}
+
+.l-menu-h:hover + .l-menu-t a{
+color: #f53b57;
+/*text-decoration: underline;*/
+font-size: 1.5vw;
+transition: all .3s ease-in-out;
+
+
+}
+
+.l-menu-h img{
+max-width: 30%;
+}
+.l-menu-t a{
+/*color: #7efff5;*/
+text-decoration: none;
+color: #000;
+font-family: 'The Nautigal', cursive;
+font-size: 2.5vw;
+}
+.l-menu-t a:hover{
+text-decoration: underline;
+color: #f53b57;
+font-size: 2vw;
+transition: all .3s ease-in-out;
+}
+/*.l-menu-t a:hover > .l-menu-t ~ .l-menu-h {
+background-color: red;
+}*/
+.is-hover-menu img{
+animation: menuanim .2s linear 2;
+-webkit-animation: menuanim .2s linear 2;
+}
+
+
+
+
+/**************CONTACT ME*****************/
+.ctact-me{
+/*background-color:rgba(223, 249, 251,0.3);*/
+/*height: 100vh;*/
+padding: 3%;
+margin-bottom: 3%;
+/*background-color: red;*/
+}
+.ctact-me-g,.ctact-me-d{
+border: solid 1px #c7ecee;
+}
+.ctact-me-g h1 span{
+font-size: 1vw;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.ctact-me-g h1{
+font-family: 'The Nautigal', cursive;
+}
+.ctact-me-g span.abon{
+background-color: darkorange;
+color: #000;
+padding: 1px;
+border-radius: 5px;
+font-weight: bold;
+}
+
+.ctact-me-d{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+
+/***___________Milieu de la SECTION___________________***/
+.ctact-me-c{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+/***_____telephone et adresse email de conatctez moi_____***/
+form.ctact-me-form ._input1,form.ctact-me-form ._input2 {
+position: relative;
+/* background-color: red !important;*/
+/*width: 20rem;*/
+}
+.ctact-me-form ._input1 label,.ctact-me-form ._input2 label{
+position: absolute;
+top: 20%;
+left: 30%;
+pointer-events: none;
+text-align: center;
+
+height: 100%;
+/*transform: translateY(-30%);*/
+/*background-color: #f1f2f6;
+width: 100%;
+border:none;
+margin-bottom: 1%;
+padding: 2%;*/
+}
+.ctact-me-form input::placeholder{
+text-align: center;
+}
+.ctact-me-form input:focus{
+border: solid 1px greenyellow;
+outline: none;
+}
+.ctact-me-form ._input1 input:focus ~ label,
+.ctact-me-form ._input2 input:focus ~ label{
+top: -1px;
+left: 5%;
+color: red;
+font-size: 11px;height: 25%;
+background-color:#f1f2f6;
+padding-left: 3px;
+padding-right: 3px;
+pointer-events: none;
+transition: 0.5s;
+}
+/*______objet et message de contactez moi_____*/
+.ctact-me-form div{
+/*border: solid 1px #f1f2f6;;*/
+background-color: /*#f1f2f6/rgba(173,255,47,0.1)*/rgba(255,255,255,.7);
+/*position: absolute;*/
+top: 0;
+left: 0;
+padding: 2%;
+width: 100%;
+
+}
+.ctact-me-form div input[type='text'],
+.ctact-me-form div input[type='email']{
+background-color: /*#f1f2f6*/transparent;
+width: 100%;
+border:none;
+border-bottom: 1px dashed /*#777*/#7efff5;
+margin: 1%;
+padding: 2%;
+outline: none;
+}
+.ctact-me-form div input::placeholder{
+text-align: center;
+}
+.ctact-me-form div input[type='text']:focus,
+.ctact-me-form div input[type='email']:focus{
+border: solid 1px greenyellow;
+outline: none;
+transition: all .5s ease-in-out;
+background-color: #fff;
+
+/*background-color: red;*/
+}
+.ctact-me-form div textarea{
+border: none;
+border-radius: 4px;
+width: 100%;
+height: 20vh;
+resize: none;
+border-bottom: 1px dashed /*#777*/#7efff5;
+}
+.ctact-me-form div textarea:focus{
+border: solid 1px greenyellow;
+outline: none;
+
+}
+.send-ctact-btn{
+border-radius: 100vmax;
+padding:1% 3% 1% 3%;
+border: none;
+background-color: #7efff5;
+}
+.send-ctact-btn:hover{
+z-index: 10;
+border: solid 1px #c7ecee;
+background-color: #c7ecee;
+transition: all .5s ease;
+}
+/*______________liens sociaux contactez moi____________________________*/
+.social-ctact{
+border: solid 1px #c7ecee;
+height: 50%;
+position: relative;
+width: 95%;
+}
+.social-ctact h6.social-ctact-t{
+position: absolute;
+left: -20%;
+top: 17%;
+transform: rotate(-58deg);
+letter-spacing: 3px;
+}
+ul.f-social-ctact{
+/*background-color: red;*/
+display: flex;
+flex-direction: column;
+align-items:center ;
+width: 100%;
+}
+ul.f-social-ctact li{
+/*margin: 2%;*/
+}
+
+
+.f-social-ctact a{
+padding: 26px;
+border-radius: 100%;
+margin: 1rem;
+}
+.f-social-ctact a.w{
+border: dashed 1px #25d366;
+}
+.f-social-ctact a.y{
+border: dashed 1px #6001d2;
+}
+.f-social-ctact a.s{
+border: dashed 1px #00aff0;
+}
+.f-social-ctact a.m{
+border: dashed 1px #00B2FF;
+}
+.f-social-ctact a.g{
+border: dashed 1px /*#4285F4*/rgba(219, 68, 55,0.3);
+}
+.f-social-ctact a img{
+max-width: 20%;
+}
+
+
+/**_____hover des icones sociales_____________*/
+.f-social-ctact a.w:hover,.fa-whatsapp-square:hover{
+border: none;
+background-color: rgba(37, 211, 102,0.3);
+transition: all .5s ease-in-out;
+}
+.f-social-ctact a.y:hover{
+border: none;
+background-color: rgba(96,1,120,0.3);
+transition: all .5s ease-in-out;
+}
+.f-social-ctact a.s:hover,.fa-skype:hover{
+border: none;
+background-color: rgba(0,175,240,0.3);
+transition: all .5s ease-in-out;
+}
+.f-social-ctact a.m:hover,.fa-facebook-messenger:hover{
+border: none;
+background-color: rgba(0, 178, 255,0.3);
+transition: all .5s ease-in-out;
+}
+.f-social-ctact a.g:hover,.fa-google:hover{
+border: none;
+background-color: rgba(219, 68, 55,0.2);
+transition: all .5s ease-in-out;
+}
+
+
+
+
+
+
+
+/*_______titre des icones sociales___*/
+ul.l-social-ctact{
+/*position: absolute;
+bottom: 0px;
+width: 100%;*/
+}
+
+ul.l-social-ctact li small{
+font-size: 0.9vw; 
+color: #ced6e0;
+font-family: Arial, Helvetica, sans-serif;
+}
+/**pointeur de menu*/
+.b-social-ctact-m{
+position: absolute;
+bottom: 12%;
+left: 17%;
+height: 7vh;
+border-left: 1px solid #dff9fb;
+}
+.b-social-ctact-m div{
+height: 100%;
+width: 100%;
+position: relative;
+animation: pointeurmenu 2s linear infinite;
+}
+.b-social-ctact-m div::after{
+content: "";
+height: 5px;
+width: 5px;
+/*background-color: red;*/
+border-radius: 100%;
+position: absolute;
+left: -3px;
+bottom: -3px;
+border: solid 2px #dfe4ea;
+}
+/*-------*/
+.b-social-ctact-s{
+position: absolute;
+bottom: 12%;
+left: 40%;
+height: 7vh;
+border-left: 1px solid #dff9fb;
+}
+.b-social-ctact-s div{
+height: 100%;
+width: 100%;
+position: relative;
+animation: pointeurmenu 2s linear infinite;
+}
+.b-social-ctact-s div::after{
+content: "";
+height: 5px;
+width: 5px;
+/*background-color: red;*/
+border-radius: 100%;
+position: absolute;
+left: -3px;
+bottom: -3px;
+border: solid 2px #dfe4ea;
+}
+/*-------*/
+.b-social-ctact-g{
+position: absolute;
+bottom: 12%;
+left: 60%;
+height: 7vh;
+border-left: 1px solid #dff9fb;
+}
+.b-social-ctact-g div{
+height: 100%;
+width: 100%;
+position: relative;
+animation: pointeurmenu 2s linear infinite;
+}
+.b-social-ctact-g div::after{
+content: "";
+height: 5px;
+width: 5px;
+/*background-color: red;*/
+border-radius: 100%;
+position: absolute;
+left: -3px;
+bottom: -3px;
+border: solid 2px #dfe4ea;
+}
+/*-------*/
+.b-social-ctact-y{
+position: absolute;
+bottom: 12%;
+left: 80%;
+height: 7vh;
+border-left: 1px solid #dff9fb;
+}
+.b-social-ctact-y div{
+height: 100%;
+width: 100%;
+position: relative;
+animation: pointeurmenu 2s linear infinite;
+}
+.b-social-ctact-y div::after{
+content: "";
+height: 5px;
+width: 5px;
+/*background-color: red;*/
+border-radius: 100%;
+position: absolute;
+left: -3px;
+bottom: -3px;
+border: solid 2px #dfe4ea;
+}
+@keyframes pointeurmenu {
+0%{transform: translateY(0%);}
+50%{transform: translateY(-100%);}
+100%{transform: translateY(0%);}
+}
+
+
+/*___icone des reseauxs sociaux*/
+ul.f-social-ctact li{
+/*display: inline;*/
+list-style: none;
+}
+
+
+/*div.l-social-ctact-1{
+position: relative;
+}
+div.l-social-ctact-1 .f-pt{
+position: absolute;
+top: -5px;
+left: -5px;
+border-left: solid 1px #777;
+height: 5vh; 
+}*/
+
+
+.f-social-ctact a i{font-size: 2rem;}
+.f-social-ctact a i{
+  
+background-color: #ffffff;
+border-radius: 2px;
+
+padding: 2px;
+}
+
+.fa-whatsapp-square{color: #25d366;}
+
+.fa-yahoo{color:#6001d2}
+
+.fa-skype{color: #00aff0;}
+
+.fa-facebook-messenger{color: #00B2FF;}
+
+.fa-google{color: rgba(219, 68, 55,1.0);}
+/*_____________end contactez moi____________________________*/
+
+
+
+
+
+
+
+/**************SECTION MES TECHNOLOGIES*************************/
+
+.tech{
+  background-color: rgba(126, 255, 245, 0.1)/*#f6f8fa*/;
+  height: 90vh;
+  /*border: solid 1px red;*/
+}
+
+
+
+/*-----sous section des orbites-------*/
+.tech-g{
+/*background-color:#777;*/
+}
+.tech{
+background-color: #d3dae4;
+transition: all 0.5s ease-in-out;
+}
+.tech #orbit-container{
+background-color: transparent;
+border: none;
+}
+#orbit-container {
+position: relative;
+/*top: 25px;*/
+/*left: 25px;*/
+height: 100%;
+width: 100%;
+padding: 2%;
+border-radius: 50%;
+border: solid 0.01em /*rgba(149, 175, 192, 0.1)*/#999;
+background-color: rgba(126, 255, 245, 0.3) !important;
+transition: all 0.3s ease-in-out;
+transform: scale(0.8);
+}
+#orbit-container:hover{
+background-color: rgba(126, 255, 245, 0.9);
+/*border: solid 1px #000;*/
+/*border-radius: 50%;*/
+/*border: solid 0.01em #95afc0 rgba(0,0,255,0.25)*/;
+}
+.orbit-1{
+width: 75%;
+height: 75%;
+/*border: dashed 1px #95afc0;*/
+position: absolute;
+border-radius: 50%;
+left: 13%;
+top: 7%;
+animation: techanim linear 35s infinite;
+}
+
+.orbit-1::after{
+font-family: "Font Awesome 5 Brands";
+font-size: 5vw;
+content: "\f41b";
+position: absolute;
+top: -30px;
+left: 30%;
+/*background-color: red;*/
+width: 30%;
+height: 30%;
+border-radius: 100%;
+font-size:3rem;
+/*animation: techanim linear 2s infinite*/
+
+}
+.orbit-1::before{
+font-family: "Font Awesome 5 Brands";
+font-size: 5vw;
+content: "\f3d3";
+position: absolute;
+bottom: -10px;
+left: 2%;
+/*background-color: red;*/
+width: 30%;
+height: 30%;
+border-radius: 100%;
+font-size:3rem;
+/*animation: techanim linear 2s infinite*/
+}
+
+.orbit-2{
+width: 65%;
+height: 65%;
+/*border: dashed 1px #95afc0;*/
+position: absolute;
+border-radius: 50%;
+left: 18%;
+top: 13%;
+animation: techanim linear 22s infinite
+}
+.orbit-2::after{
+font-family: "Font Awesome 5 Brands";
+font-size: 5vw;
+content: "\f38b";
+position: absolute;
+top: -30px;
+left: 20%;
+/*background-color: red;*/
+width: 30%;
+height: 30%;
+border-radius: 100%;
+font-size:3rem;
+/*animation: techanim linear 2s infinite*/
+}
+.orbit-2::before{
+font-family: "Font Awesome 5 Brands";
+font-size: 5vw;
+content: "\f13b";
+position: absolute;
+bottom: -75px;
+left: 50%;
+/*background-color: red;*/
+width: 30%;
+height: 30%;
+font-size:3rem;
+/*border-radius: 100%;*/
+/*background-color: red;*/
+/*animation: techanim linear 2s infinite*/
+}
+
+
+.orbit-3{
+width: 55%;
+height: 55%;
+/*border: dashed 1px #95afc0;*/
+position: absolute;
+border-radius: 50%;
+left: 22%;
+top: 17%;
+
+animation: techanim linear 19s infinite;
+}
+.orbit-3::after{
+/*font-family: "Font Awesome  Brands";*/
+/*font-size: 5vw;*/
+content: "";
+background: url(../images/mongodb.png);
+/*background-size: contain;*/
+background-repeat: no-repeat;
+position: absolute;
+top: -30px;
+left: 20%;
+/*background-color: red;*/
+width: 30%;
+height: 30%;
+border-radius: 100%;
+font-size:3rem;
+/*animation: techanim linear 2s infinite*/
+}
+.orbit-3::before{
+font-family: "Font Awesome 5 Brands";
+font-size: 5vw;
+content: "";
+position: absolute;
+bottom: -10px;
+left: 65%;
+/*background-color: red;*/
+width: 20%;
+height: 20%;
+background: url(../images/sqlserverr.png);
+background-size: contain;
+background-repeat: no-repeat;
+font-size:3rem;
+/*border-radius: 100%;*/
+/*background-color: red;*/
+/*animation: techanim linear 2s infinite*/
+}
+
+
+.orbit-4{
+width: 45%;
+height: 45%;
+/*border: dashed 1px #95afc0;*/
+position: absolute;
+border-radius: 50%;
+left: 27%;
+top: 20%;
+animation: techanim linear 16s infinite;
+}
+.orbit-4::after{
+/*font-family: "Font Awesome  Brands";*/
+/*font-size: 5vw;*/
+content: "";
+background: url(../images/bootstrap.png);
+/*background-size: contain;*/
+background-repeat: no-repeat;
+position: absolute;
+top: -10px;
+left: 20%;
+/*background-color: red;*/
+width: 30%;
+height: 30%;
+border-radius: 100%;
+font-size:3rem;
+/*animation: techanim linear 2s infinite*/
+}
+.orbit-4::before{
+font-family: "Font Awesome 5 Brands";
+font-size: 5vw;
+content: "";
+position: absolute;
+bottom: -10px;
+left: 65%;
+/*background-color: red;*/
+width: 20%;
+height: 20%;
+background: url(../images/springboot.png);
+background-size: contain;
+background-repeat: no-repeat;
+font-size:3rem;
+/*border-radius: 100%;*/
+/*background-color: red;*/
+/*animation: techanim linear 2s infinite*/
+}
+
+.orbit-5{
+width: 35%;
+height: 35%;
+/*border: dashed 1px #95afc0;*/
+position: absolute;
+border-radius: 50%;
+left: 32%;
+top: 25%;
+animation: techanim linear 13s infinite
+}
+.orbit-5::after{
+/*font-family: "Font Awesome  Brands";*/
+/*font-size: 5vw;*/
+content: "";
+background: url(../images/golang.png);
+/*background-size: contain;*/
+background-repeat: no-repeat;
+position: absolute;
+top: -10px;
+left: 20%;
+/*background-color: red;*/
+width: 30%;
+height: 30%;
+border-radius: 100%;
+font-size:3rem;
+/*animation: techanim linear 2s infinite*/
+}
+.orbit-5::before{
+font-family: "Font Awesome 5 Brands";
+font-size: 5vw;
+content: "";
+position: absolute;
+bottom: -10px;
+left: 65%;
+/*background-color: red;*/
+width: 20%;
+height: 20%;
+background: url(../images/mysql.png);
+background-size: contain;
+background-repeat: no-repeat;
+font-size:3rem;
+/*border-radius: 100%;*/
+/*background-color: red;*/
+/*animation: techanim linear 2s infinite*/
+}
+
+.orbit-6{
+width: 25%;
+height: 25%;
+/*border: dashed 1px #95afc0;*/
+position: absolute;
+border-radius: 50%;
+left: 37%;
+top: 30%;
+animation: techanim linear 10s infinite;
+}
+.orbit-6::after{
+/*font-family: "Font Awesome  Brands";*/
+/*font-size: 5vw;*/
+content: "";
+background: url(../images/java.png);
+/*background-size: contain;*/
+background-repeat: no-repeat;
+position: absolute;
+top: -10px;
+left: 20%;
+/*background-color: red;*/
+width: 30%;
+height: 30%;
+border-radius: 100%;
+font-size:3rem;
+/*animation: techanim linear 2s infinite*/
+}
+.orbit-6::before{
+font-family: "Font Awesome 5 Brands";
+font-size: 5vw;
+content: "";
+position: absolute;
+bottom: -10px;
+left: 65%;
+/*background-color: red;*/
+width: 20%;
+height: 20%;
+background: url(../images/github.png);
+background-size: contain;
+background-repeat: no-repeat;
+font-size:3rem;
+/*border-radius: 100%;*/
+/*background-color: red;*/
+/*animation: techanim linear 2s infinite*/
+}
+
+/**************ceci est l'orbite du titre mes technos******/
+.orbit-7{
+/*width: 15%;*/
+/*height: 5%;*/
+border-bottom: solid 1px #95afc0;
+position: absolute;
+/*border-radius: 100%;*/
+color: /*#95afc0*/#F90F60;
+font-weight: bold;
+left: 20%;
+top: 38%;
+font-family: 'The Nautigal', cursive;
+font-size: 2rem;
+font-size:3rem;
+/*animation: techanim linear 50s infinite*/
+
+}
+
+@-webkit-keyframes techanim {
+
+100% {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+}
+
+
+
+
+
+/*___sous section droite_____*/
+.tech-d{
+  text-align: center;
+  background-color: rgba(223, 249, 251,0.4);
+}
+
+.tech-d img{
+max-width: 55%;
+-webkit-transform: rotate(80deg);
+-moz-transform: rotate(80deg);
+-ms-transform: rotate(80deg);
+-o-transform: rotate(80deg);
+transform: rotate(80deg);
+border-radius: 50% 44% 73% 27% / 45% 68% 32% 55%;
+transition: all .5s ease-in-out;
+}
+.tech-d img:hover{
+border-radius: 79% 21% 29% 71% / 11% 74% 26% 89%;
+-webkit-transform: rotate(100deg);
+-moz-transform: rotate(100deg);
+-ms-transform: rotate(100deg);
+-o-transform: rotate(100deg);
+transform: rotate(100deg);
+}
+
+.tech-d .tech-d-d{
+position: relative;
+}
+
+.tech-d-d .tech-d-t{
+position: absolute;
+height: 3%;
+width: 10%;
+left: 45%;
+bottom: -100%;
+display: none;
+background-color: #7efff5;
+color: #000;
+
+}
+.tech-d-d:hover .tech-d-t{
+display: block;
+bottom: 20%;
+animation: revtechtitre .7s linear;
+}
+.tech-d-t-f::after{
+content: "";
+position: relative;
+width: 100px;
+height: 10rem;
+top: 0%;
+left: 0%;
+border-left: 1px solid #7efff5;
+}
+@keyframes revtechtitre {
+0%{bottom:-100%;}
+50%{bottom: 40%;}
+100%{bottom: 20%;}
+}
+
+/**************************************************/
+/************END SECTION MES TECHNOS****************/
+
+
+
+
+
+
+/*|||||||||||||||||| SECTION MES SERVICES ||||||||||||||||||*/
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.myservices{
+/*height: 100vh;*/
+/*background-color: #7efff5;*/
+border: dashed 2px #7efff5;
+padding: 5%;
+padding-bottom:5%;
+/*border: solid 1px rgba(153, 128, 250,0.3);*/
+}
+
+.myservices .r-title{
+/*color: rgba(153, 128, 250,0.3);*/
+/*width: 40%;
+text-align: center;
+margin: auto;*/
+}
+/*.myservices-t-fixed{
+position: fixed;
+top: 0;
+left: 0;
+border: solid 1px rgba(153, 128, 250,1);
+transition: 0.5s;
+font-size: 10px !important;
+text-align: left !important;
+}*/
+.myservices-t{
+padding-bottom: 5px;
+/*width: 50%;*/
+text-align: center;
+margin: 0 auto;
+/*background-color: red;*/
+}
+.myservices-t h1{
+border-bottom: 3px solid #222;
+font-size: 3em;
+font-weight: 900;
+text-align: center;
+font-family: 'Poppins', sans-serif;
+color: rgba(153, 128, 250,0.3);
+/*color: red;*/
+}
+.myservices-t h1 span{
+font-weight: 50;
+color: #000;
+}
+.myservices .r-title::after{
+content: "";
+width: 50px;
+height: 50px;
+right: 0%;
+bottom: 0%;
+border-radius: 100%;
+background-color: rgba(153, 128, 250,0.3);
+}
+
+.s-item{
+width: 80%;
+height: 200px;
+background-color: rgba(153, 128, 250,0.3);
+position: relative;
+font-size: 2rem;
+/*-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 50%;*/
+display:flex;
+flex-direction: row;
+justify-content:space-around;
+align-items: center;
+padding: 3%;
+font-family: 'Dancing Script', cursive;
+}
+.s-item:hover{
+/*background-color: red;*/
+transition: all 0.3s ease-in-out;
+filter: drop-shadow(-6px 40px 23px rgba(153, 128, 250,1));
+transform: scale(0.9);
+border: solid 1px rgba(153, 128, 250,1);
+color: #000;
+z-index: 5000;
+font-size: 800;
+text-shadow:3px 3px 3px #f53b57;
+}
+/*.s-item-1 img{
+margin-bottom: -110%;
+margin-right: -100px;
+}*/
+/*.s-item::before{
+content: "";
+position: absolute;
+right: 100%;
+top: 45px;
+width: 0;
+height: 0;
+left: -3%;
+border-top: 13px solid transparent;
+border-right: 26px solid rgba(247, 159, 31,0.2);
+border-bottom: 13px solid transparent;
+}*/
+
+/*quand on hover le before apparait...*/
+/*.s-item:hover .s-item::before{
+content: '';
+position: absolute;
+width: 170px;
+height: 140px;
+border-radius: 5px;
+background: linear-gradient(#00ccff, #d500f9);
+animation: rotate 4s linear infinite;
+}*/
+
+@-moz-keyframes rotate{
+from{
+  -moz-transform:rotate(0deg)
+}
+to{
+  -moz-transform:rotate(360deg)
+}
+}
+.s-item-1,.s-item-4,.s-item-5,.s-item-8,.s-item-9,.s-item-12,.s-item-13{
+
+filter: drop-shadow(-6px 40px 23px rgba(153, 128, 250,1));
+/*border: solid 1px rgba(153, 128, 250,1);*/
+color: #000;
+
+font-size: 800;
+word-spacing: 5px;
+-moz-animation: 4s ease 0s normal none infinite swing;
+-moz-transform-origin: center top;
+-webkit-animation:swing 4s infinite ease-in-out;
+-webkit-transform-origin:top;
+}
+.s-item-2,.s-item-3,.s-item-6,.s-item-7,.s-item-10,.s-item-11,.s-item-14{  
+
+transform: scale(0.9);
+}
+
+.s-item-::after{
+content: "Développement d'application FullStack avec React JS et Mongo DB";
+position: absolute;
+height: 35vh;
+left: 15%;
+width: 70%;
+padding-top: 15%;
+text-align: center;
+/*font-family: 'Splash', cursive;*/
+font-family: 'Dancing Script', cursive;
+font-size: large;
+word-spacing: 5px;
+font-weight: 100;
+background-image: url(../images/hominterfac.PNG);
+background-position: bottom right;
+/*background-size: 10px;*/
+background-repeat: no-repeat;
+background-color: rgba(153, 128, 250,0.3);
+
+
+-moz-animation: 4s ease 0s normal none infinite swing;
+-moz-transform-origin: center top;
+-webkit-animation:swing 4s infinite ease-in-out;
+-webkit-transform-origin:top;
+}
+.s-item2::after{
+content: "Développement d'application mobile avec React Native";
+position: absolute;
+height: 35vh;
+left: 15%;
+width: 70%;
+padding-top: 15%;
+text-align: center;
+/*font-family: 'Splash', cursive;*/
+font-family: 'Dancing Script', cursive;
+font-size: large;
+word-spacing: 5px;
+font-weight: 100;
+background-image: url(../images/hominterfac.PNG);
+background-position: bottom right;
+/*background-size: 10px;*/
+background-repeat: no-repeat;
+background-color: rgba(153, 128, 250,0.3);
+}
+.s-item3::after{
+content: "Développement d'application web avec Java Spring Boot";
+position: absolute;
+height: 35vh;
+left: 15%;
+width: 70%;
+padding-top: 15%;
+text-align: center;
+/*font-family: 'Splash', cursive;*/
+font-family: 'Dancing Script', cursive;
+font-size: large;
+word-spacing: 5px;
+font-weight: 100;
+background-image: url(../images/hominterfac.PNG);
+background-position: bottom right;
+/*background-size: 10px;*/
+background-repeat: no-repeat;
+background-color: rgba(153, 128, 250,0.3);
+
+-moz-animation: 4s ease 0s normal none infinite swing;
+-moz-transform-origin: center top;
+-webkit-animation:swing 4s infinite ease-in-out;
+-webkit-transform-origin:top;
+}
+.s-item4::after{
+content: "Développement de sites web et thèmes Wordpress";
+position: absolute;
+height: 35vh;
+left: 15%;
+width: 70%;
+padding-top: 15%;
+text-align: center;
+/*font-family: 'Splash', cursive;*/
+font-family: 'Dancing Script', cursive;
+font-size: large;
+word-spacing: 5px;
+font-weight: 100;
+background-image: url(../images/hominterfac.PNG);
+background-position: bottom right;
+/*background-size: 10px;*/
+background-repeat: no-repeat;
+background-color: rgba(153, 128, 250,0.3);
+}
+@-moz-keyframes swing{
+0%{-moz-transform:rotate(-2deg)}
+50%{-moz-transform:rotate(2deg)}
+100%{-moz-transform:rotate(-2deg)}
+}
+
+/******************************** 2ème ligne des services********/
+.b-item{
+width: 80%;
+height: 200px;
+background-color: rgba(153, 128, 250,0.3);
+position: relative;
+/* -moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 50%;*/
+
+display:flex;
+flex-direction: row;
+justify-content:space-between;
+align-items: center;
+padding: 3%;
+font-family: 'Dancing Script', cursive;
+font-size: 2rem;
+}
+.b-item:hover{
+/*background-color: red;*/
+transition: all 0.5s ease-in-out;
+filter: drop-shadow(-6px 40px 23px rgba(153, 128, 250,1));
+transform: scale(0.9);
+border: solid 1px rgba(153, 128, 250,1);
+color: #000;
+z-index: 5000;
+font-size: 800;
+text-shadow:2px 2px 2px #f53b57;
+;
+
+}
+/*.b-item::before{
+content: "";
+position: absolute;
+right: 100%;
+top: 45px;
+width: 0;
+height: 0;
+right: -3%;
+border-bottom: 13px solid transparent;
+border-left: 26px solid rgba(247, 159, 31,0.2);
+border-top: 13px solid transparent;
+}*/
+.s-item5::after{
+content: "Administration des BD Mysql et SQL Server 2012";
+position: absolute;
+height: 35vh;
+left: 15%;
+width: 70%;
+padding-top: 15%;
+text-align: center;
+/*font-family: 'Splash', cursive;*/
+font-family: 'Dancing Script', cursive;
+font-size: large;
+word-spacing: 5px;
+font-weight: 100;
+background-image: url(../images/interfacehome1.PNG);
+background-position: left bottom;
+/*background-size: 10px;*/
+background-repeat: no-repeat;
+background-color: rgba(153, 128, 250,0.2);
+}
+.s-item6::after{
+content: "Conception de système Business Intelligence avec Sql Server 2012";
+position: absolute;
+height: 35vh;
+left: 15%;
+width: 70%;
+padding-top: 15%;
+text-align: center;
+/*font-family: 'Splash', cursive;*/
+font-family: 'Dancing Script', cursive;
+font-size: large;
+word-spacing: 5px;
+font-weight: 100;
+background-image: url(../images/interfacehome1.PNG);
+background-position: left bottom;
+/*background-size: 10px;*/
+background-repeat: no-repeat;
+background-color: rgba(153, 128, 250,0.2);
+
+-moz-animation: 4s ease 0s normal none infinite swing;
+-moz-transform-origin: center top;
+-webkit-animation:swing 4s infinite ease-in-out;
+-webkit-transform-origin:top;
+}
+.s-item7::after{
+content: "Conception des états avec Jaspertsoft Ireport Designer 5.x";
+position: absolute;
+height: 35vh;
+left: 15%;
+width: 70%;
+padding-top: 15%;
+text-align: center;
+/*font-family: 'Splash', cursive;*/
+font-family: 'Dancing Script', cursive;
+font-size: large;
+word-spacing: 5px;
+font-weight: 100;
+background-image: url(../images/interfacehome1.PNG);
+background-position: left bottom;
+/*background-size: 10px;*/
+background-repeat: no-repeat;
+background-color: rgba(153, 128, 250,0.2);
+
+-moz-animation: 5s ease 0s normal none infinite swing;
+-moz-transform-origin: center top;
+-webkit-animation:swing 5s infinite ease-in-out;
+-webkit-transform-origin:top;
+}
+.s-item8::after{
+content: "Développement d'application avec Node JS comme backend ||Golang";
+position: absolute;
+height: 35vh;
+left: 15%;
+width: 70%;
+padding-top: 15%;
+text-align: center;
+/*font-family: 'Splash', cursive;*/
+font-family: 'Dancing Script', cursive;
+font-size: large;
+word-spacing: 5px;
+font-weight: 100;
+background-image: url(../images/interfacehome1.PNG);
+background-position: left bottom;
+/*background-size: 10px;*/
+background-repeat: no-repeat;
+background-color: rgba(153, 128, 250,0.2);
+}
+
+
+/******************************** 3ème ligne des services********/
+.s-item9::after{
+content: "HETICHAL HACKING";
+position: absolute;
+height: 35vh;
+left: 15%;
+width: 70%;
+padding-top: 15%;
+text-align: center;
+/*font-family: 'Splash', cursive;*/
+font-family: 'Dancing Script', cursive;
+font-size: large;
+word-spacing: 5px;
+font-weight: 100;
+background-image: url(../images/interfacehome3.PNG);
+background-position: 50% 100%;
+/*background-size: 10px;*/
+background-repeat: no-repeat;
+background-color: rgba(153, 128, 250,0.1);
+}
+
+.s-item10::after{
+content: "Analyse et Conception UML | MERISE";
+position: absolute;
+height: 35vh;
+left: 15%;
+width: 70%;
+padding-top: 15%;
+text-align: center;
+/*font-family: 'Splash', cursive;*/
+font-family: 'Dancing Script', cursive;
+font-size: large;
+word-spacing: 5px;
+font-weight: 100;
+background-image: url(../images/interfacehome3.PNG);
+background-position: 50% 100%;
+/*background-size: 10px;*/
+background-repeat: no-repeat;
+background-color: rgba(153, 128, 250,0.1);
+}
+.s-item11::after{
+content: "Gestion de projet Informatique avec SCRUM - Méthodes Argiles";
+position: absolute;
+height: 35vh;
+left: 15%;
+width: 70%;
+padding-top: 15%;
+text-align: center;
+/*font-family: 'Splash', cursive;*/
+font-family: 'Dancing Script', cursive;
+font-size: large;
+word-spacing: 5px;
+font-weight: 100;
+background-image: url(../images/interfacehome3.PNG);
+background-position: 50% 100%;
+/*background-size: 10px;*/
+background-repeat: no-repeat;
+background-color: rgba(153, 128, 250,0.1);
+}
+
+.s-item12::after{
+content: "Redaction cahier de charges sites et applications web";
+position: absolute;
+height: 35vh;
+left: 15%;
+width: 70%;
+padding-top: 15%;
+text-align: center;
+/*font-family: 'Splash', cursive;*/
+font-family: 'Dancing Script', cursive;
+font-size: large;
+word-spacing: 5px;
+font-weight: 100;
+background-image: url(../images/interfacehome3.PNG);
+background-position: 50% 100%;
+/*background-size: 10px;*/
+background-repeat: no-repeat;
+background-color: rgba(153, 128, 250,0.1);
+}
+
+
+
+/*********************** A PROPOS DE MOI  ************************************/
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+.moi{
+/*text-align: center;*/
+height: 90vh;
+}
+.moi-photo{
+max-width: 25%;
+float: left;
+/* margin-right: 2rem;*/
+shape-outside: circle(50%);
+margin-right: 1rem;
+}
+/*.moi h1{
+color: #95afc0;
+font-weight: bold;
+font-family: 'The Nautigal', cursive;
+font-size: 5vw;
+}*/
+.moi p{
+text-align: justify;
+}
+
+.moi .r-title .myservices-t::after{
+content: "";
+width: 50px;
+height: 50px;
+margin-right: -50%;
+bottom: 0%;
+border-radius: 100%;
+background-color: #7efff5;
+}
+.moi .myservices-t,.moi article{
+display: flex;
+flex-direction: column;justify-content: center;align-items: center;
+width: 100%;
+height: 100%;
+}
+.moi article{
+height: 100%;
+}
+.moi .myservices-t h1{
+border-bottom: 3px solid #222;
+font-size: 3em;
+font-weight: 900;
+text-align: left;
+font-family: 'Poppins', sans-serif;
+color: #000;
+/*color: red;*/
+}
+.moi .myservices-t h1 span{
+color: #7efff5;
+}
+.moi-txt div{
+padding: 1rem;
+}
+.moi-txt:hover div{
+/*background-color: red;*/
+box-shadow: 5px 5px 20px rgba(0, 0, 0,0.4);
+cursor: pointer;
+transition: all 500ms ease;
+transform: translateX(3%);
+cursor: pointer;
+/*transform: translate(-3%);*/
+}
+.competences{background-color: #f3f3f3;
+width: 80%;
+text-align: center;color: #777;
+letter-spacing: 2px;}
+/*présentation des certifications*/
+.cardo{
+position: relative;
+width: 300px;
+height: 350px;
+margin-bottom: 10px;
+}
+.cardo1{
+position: relative;
+width: 300px;
+height: 450px;
+margin-bottom: 15px;
+}
+.cardo .face,.cardo1 .face{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+border-radius: 3px;
+overflow: hidden;
+transition: .5s;
+}
+.cardo .front,.cardo1 .front{
+transform: perspective(600px) rotateY(0deg);
+box-shadow: 0 5px 10px #000;
+}
+.cardo .front img,.cardo1 .front img{
+position: absolute;
+width: 100%;
+height: 80%;
+/*object-fit: cover;*/
+}
+.cardo .front h6,.cardo1 .front h6{
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 150px;
+line-height: 45px;
+/*color: yellow;*/
+font-weight: 900;
+font-size: 1.5rem;
+background-color: rgba(0,0,0,0.4);
+text-align: center;
+}
+
+.cardo .back,.cardo1 .back{
+transform: perspective(600px) rotateY(180deg);
+background: rgb(3,35,54);
+padding: 15px;
+color: #f3f3f3;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+text-align: center;
+box-shadow: 0 5px 10px #000;
+transition: all 500ms ease;
+}
+.cardo .back .link,.cardo1 .back .link{
+border-top: solid 1px #f3f3f3;
+height: 50px;
+line-height: 50px;
+}
+.cardo .back .link a,.cardo1 .back .link a{
+color: #f3f3f3;
+}
+.cardo .back h3,.cardo1 .back h3{
+font-size: 30px;
+margin-top: 20px;
+letter-spacing: 2px;
+}
+.cardo .back p,.cardo1 .back p{
+letter-spacing: 1px;
+}
+
+.cardo:hover .front,.cardo1:hover .front{
+transform: perspective(600px) rotateY(180deg);
+transition: all 500ms ease;
+cursor: help;
+}
+.cardo:hover .back,.cardo1:hover .back{
+transform: perspective(600px) rotateY(360deg);
+transition: all 500ms ease;
+cursor: help;
+}
+/*fin présentation des certification*/
+
+/*********************** FOOTER ************************************/
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+.pied{
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: #7efff5;
+color: red/*#95afc0*/;
+text-align: center;
+font-family: 'The Nautigal', cursive;
+font-size: 3vw;
+margin-top: 2rem;
+}
+.pied small:hover{
+font-size: 2vw;
+font-family: Arial, Helvetica, sans-serif;
+transition: all 0.5s ease-in-out;
+cursor: pointer;
+}
+
+
+
+
+
+
+
+/*********************** GALLERIE PHOTOS ************************************/
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.gallerie-p{
+/*margin: 2%;*/
+padding-bottom: 2%;
+margin-bottom: 3%;
+}
+.box{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+/*align-items: center;*/
+}
+
+.bx-item{
+display: flex;
+flex-direction: column;
+width: 33%;
+padding: 0.5rem;
+}
+.bx-item img{
+max-width: 100%;
+padding-bottom: 2px;
+border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************** BACK TO TOP BUTTON ************************************/
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+
+.side-b{
+position: fixed;
+bottom: 50px;
+left: -1%;
+z-index: 5;
+display: none;
+}
+.side-b ul{
+width: 8%;
+}
+.side-b ul li{
+list-style: none;
+margin-top: 3%;
+margin-bottom: 3%;
+
+width: 100%;
+}
+
+button.backtop{
+  height: 40px;
+  width: 30%;
+  background-color: transparent;
+  padding: 2%;
+  border: none;
+  /*border: solid 2px #F90F60;*/
+  color: #F90F60;
+  /*position: fixed;
+  bottom: 50px;
+  left: 20px;*/
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  
+}
+button.backtop:hover{
+  border-radius: 50%;
+  border: solid 1px #F90F60;
+  height: 25px;
+  width: 25px;
+  transform: scale(1.05) 
+  translateY(-5px);
+  transition: all 0.5s ease-in-out;
+  background-color: #F90F60;
+  color: #fff;
+}
+
+.side-b ul li button i{
+animation: sidebuttons 1s infinite;
+}
+.side-b ul li img{
+max-width: 100%;
+}
+
+@-webkit-keyframes sidebuttons {
+100% {
+  -webkit-transform: translate(0,-3px);
+  -moz-transform: translate(0,-3px);
+  -ms-transform: translate(0,-3px);
+  -o-transform: translate(0,-3px);
+  transform: translate(0,-3px);
+}
+}
+
+/*****intitulé des menus de la sidebar*****/
+.side-b ul li{
+position: relative;
+}
+.side-b ul .serv::after{
+content: " les services";
+position: absolute;
+/* left: 110%;*/
+right: 300%;
+top: 3px;
+/*height: 110%;*/
+width: 100px;
+background-color: #F90F60;
+padding-left: 5px;
+padding-right: 5px;
+border-radius: 7px 0px 7px 0px;
+font-style: italic;
+/*border: solid 1px #000;*/
+font-size: 1vw;
+color:#000;
+}
+.side-b ul li.serv:hover .side-b ul li.serv::after{
+left: 110%;
+right: 0%;
+}
