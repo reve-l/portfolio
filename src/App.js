@@ -3,13 +3,14 @@
 
 import './assets/css/style.css';
 
-// import your icons
-import { library } from '@fortawesome/fontawesome-svg-core'
+//import { fab } from '@fortawesome/free-brands-svg-icons' 
 
 // import your icons
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
+import { faCoffee,faQuoteLeft,faQuoteRight, } from '@fortawesome/free-solid-svg-icons'
+import { faWhatsappSquare,faSkype,faFacebookMessenger,faGoogle } from '@fortawesome/free-brands-svg-icons'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 import revel from "./assets/images/revel.jpg";
 import srvices from "./assets/images/srvices.png";
@@ -130,6 +131,8 @@ function App() {
                         </div>
                   </section>
 
+                  <FontAwesomeIcon icon="fa-brands fa-whatsapp-square" />
+                  <FontAwesomeIcon icon={faCoffee} />
                   
                   <section class="row ctact-me pt-5">
                     <article class="col ctact-me-g">
@@ -160,16 +163,13 @@ function App() {
                       </form>
 
                     </article>
-                    <div class="col ctact-me-c"><p><i class="fas fa-quote-left"></i> &nbsp; J'attend... &nbsp; <i class="fas fa-quote-right"></i></p></div>
+                    <div class="col ctact-me-c"><p><FontAwesomeIcon icon={faQuoteLeft} /> &nbsp; J'attend... &nbsp; <FontAwesomeIcon icon={faQuoteRight} /></p></div>
                     <article class="col ctact-me-d f-social-ctact">
                           <h6 class="social-ctact-t">join me with social media</h6>
-                          <a href="" class="w"><i class="fa-brands fa-whatsapp-square"></i></a>
-                          <a href="" class="m"><i class="fa-brands fa-facebook-messenger"></i></a>
-                          <a href="" class="s"><i class="fa-brands fa-skype"></i></a>
-                          <a href="" class="g"><i class="fa-brands fa-google"></i></a>
-                         
-                          <a href="#" class="y"><i class="fa-brands fa-yahoo"></i></a>
-                 
+                          <a href="" class="w"><FontAwesomeIcon icon={faWhatsappSquare} /></a>
+                          <a href="" class="m"><FontAwesomeIcon icon={faFacebookMessenger} /></a>
+                          <a href="" class="s"><FontAwesomeIcon icon={faSkype} /></a>
+                          <a href="" class="g"><FontAwesomeIcon icon={faGoogle} /></a>               
                     </article>
                   </section>
 
