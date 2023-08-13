@@ -121,6 +121,48 @@ function App() {
                         </div>
                   </section>
 
+                  
+                  <section class="row ctact-me pt-5">
+                    <article class="col ctact-me-g">
+
+                      <h1>Contactez moi <span>directement...</span></h1> 
+                      <p>Vous pouvez m'écrire directement à l'aide du formulaire ci-dessous et je recevrai directement une notification dans mon téléphone, ou alors à partir des liens sociaux à votre droite. Pour m'écrire il faut se connecter, pour se connecter il faut s'abonner pour la première connexion</p>
+                      <span class="abon">s'abonner</span> <em> pour m'écrire directement...</em>   
+                      <p class="btn btn-info">ou bien <a class="conn"><span class="badge badge-light">se connecter</span></a></p>         
+                      <form action="" class="ctact-me-form">
+
+                        <div class="_input1">
+                          <input type="text" placeholder="" id="téléphone" />
+                          <label for="téléphone" class="_label">Téléphone</label>
+                        </div>
+
+                        <div class="_input2">
+                          <input type="email" name="" id="" placeholder="" class="" />
+                          <label for="email" class="_label">Email</label>
+                        </div>
+
+                        <div>
+                          <label for="text" class="_label">Objet</label>
+                          <textarea name="" id="" cols="30" rows="10"></textarea>
+                          <div>
+                            <button class="send-ctact-btn">Envoyer</button>
+                          </div>
+                        </div>           
+                      </form>
+
+                    </article>
+                    <div class="col ctact-me-c"><p><i class="fas fa-quote-left"></i> &nbsp; J'attend... &nbsp; <i class="fas fa-quote-right"></i></p></div>
+                    <article class="col ctact-me-d f-social-ctact">
+                          <h6 class="social-ctact-t">join me with social media</h6>
+                          <a href="" class="w"><i class="fa-brands fa-whatsapp-square"></i></a>
+                          <a href="" class="m"><i class="fa-brands fa-facebook-messenger"></i></a>
+                          <a href="" class="s"><i class="fa-brands fa-skype"></i></a>
+                          <a href="" class="g"><i class="fa-brands fa-google"></i></a>
+                         
+                          <a href="#" class="y"><i class="fa-brands fa-yahoo"></i></a>
+                 
+                    </article>
+                  </section>
 
 
 
