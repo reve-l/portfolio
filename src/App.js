@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
 import './assets/css/style.css';
 
 import revel from "./assets/images/revel.jpg";
@@ -8,7 +8,11 @@ import srvices from "./assets/images/srvices.png";
 import realisations from "./assets/images/realisations.png";
 import contact from "./assets/images/contact.png";
 import technologies from "./assets/images/technologies.png";
-import aboutrevel from "./assets/images/aboutrevel.png"
+import aboutrevel from "./assets/images/aboutrevel.png";
+
+import interfacehome3 from "./assets/images/interfacehome3.PNG";
+import interfacehome1 from "./assets/images/interfacehome1.PNG";
+import hominterfac from "./assets/images/hominterfac.PNG";
 
 function App() {
   return (
@@ -59,14 +63,76 @@ function App() {
                 </div>
               </header>
 
+              <div class="container">
 
+                  <section class="row myservices">
+
+                        <div class="row mb-5 r-title">
+                          <div class="col-12 text-center">
+                            <div class="myservices-t">
+                              <h1>Mes <span>services</span> </h1>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row mb-1">
+                          <article class="col-6">
+                            <div class="s-item s-item-1"><p>Développement d'application FullStack avec React JS et Mongo DB</p><img src={hominterfac} alt=""/></div>
+                          </article>
+                          <article class="col-6">
+                            <div class="s-item s-item-2"><p>Développement d'application mobile avec React Native</p><img src={hominterfac} alt=""/></div>
+                          </article>
+                          <article class="col-6">
+                            <div class="s-item s-item-3"><p>Développement d'application web avec Java Spring Boot</p><img src={hominterfac} alt=""/></div>
+                          </article>
+                          <article class="col-6 mb-1">
+                            <div class="s-item s-item-4"><p>Développement de sites web et thèmes Wordpress</p><img src={hominterfac} alt=""/></div>
+                          </article>
+                        </div>
+
+                        <div class="row mb-1">
+                          <article class="col-6">
+                            <div class="b-item s-item-5"><p>Administration des BD Mysql et SQL Server 2012 </p><img src={interfacehome1} alt=""/></div>
+                          </article>
+                          <article class="col-6">
+                            <div class="b-item s-item-6"><p>Conception de système Business Intelligence avec Sql Server 2012</p> <img src={interfacehome1} alt=""/></div>
+                          </article>
+                          <article class="col-6">
+                            <div class="b-item s-item-7"><p>Conception des états avec Jaspertsoft Ireport Designer 5.x</p> <img src={interfacehome1} alt=""/></div>
+                          </article>
+                          <article class="col-6">
+                            <div class="b-item s-item-8"><p>Développement d'application avec Node JS | Spring Boot | Golang  comme backend</p> <img src={interfacehome1} alt=""/></div>
+                          </article>
+                        </div>
+
+                        <div class="row">
+                          <article class="col-6">
+                            <div class="b-item s-item-9"><p>HETICHAL HACKING</p> <img src={interfacehome3} alt=""/></div>
+                          </article>
+                          <article class="col-6">
+                            <div class="b-item s-item-10"><p></p>Analyse et Conception UML | MERISE <img src={interfacehome3} alt=""/></div>
+                          </article>
+                          <article class="col-6">
+                            <div class="b-item s-item-11"><p></p>Gestion de projet Informatique avec SCRUM - Méthodes Argiles <img src={interfacehome3} alt=""/></div>
+                          </article>
+                          <article class="col-6">
+                            <div class="b-item s-item-12"><p></p>Redaction cahier de charges sites et applications web <img src={interfacehome3} alt=""/></div>
+                          </article>
+                        </div>
+                  </section>
+
+
+
+
+
+              </div>
 
 
               <footer class="pied mt-5">
                 <small>&copy; 2014 - revel - portfolio</small>
               </footer>
 
-      </div>
+    </div>
   );
 }
 

@@ -1007,9 +1007,9 @@ text-align: left !important;
 }*/
 .myservices-t{
 padding-bottom: 5px;
-/*width: 50%;*/
+width: 35%;
 text-align: center;
-margin: 0 auto;
+margin-left: 0;
 /*background-color: red;*/
 }
 .myservices-t h1{
@@ -1107,9 +1107,21 @@ color: #000;
 font-size: 800;
 word-spacing: 5px;
 -moz-animation: 4s ease 0s normal none infinite swing;
+-webkit-animation: 4s ease 0s normal none infinite swing;
+animation: 4s ease 0s normal none infinite swing;
 -moz-transform-origin: center top;
--webkit-animation:swing 4s infinite ease-in-out;
--webkit-transform-origin:top;
+-webkit-transform-origin: center top;
+-ms-transform-origin: center top;
+    transform-origin: center top;
+    border: solid 5px rgba(153, 128, 250,0.1);
+
+    -webkit-animation-name: swing;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+
+    animation-name: swing;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 .s-item-2,.s-item-3,.s-item-6,.s-item-7,.s-item-10,.s-item-11,.s-item-14{  
 
@@ -1137,9 +1149,12 @@ background-color: rgba(153, 128, 250,0.3);
 
 
 -moz-animation: 4s ease 0s normal none infinite swing;
+-webkit-animation: 4s ease 0s normal none infinite swing;
+animation: 4s ease 0s normal none infinite swing;
 -moz-transform-origin: center top;
--webkit-animation:swing 4s infinite ease-in-out;
--webkit-transform-origin:top;
+-webkit-transform-origin: center top;
+-ms-transform-origin: center top;
+    transform-origin: center top;
 }
 .s-item2::after{
 content: "Développement d'application mobile avec React Native";
@@ -1180,9 +1195,12 @@ background-repeat: no-repeat;
 background-color: rgba(153, 128, 250,0.3);
 
 -moz-animation: 4s ease 0s normal none infinite swing;
+-webkit-animation: 4s ease 0s normal none infinite swing;
+animation: 4s ease 0s normal none infinite swing;
 -moz-transform-origin: center top;
--webkit-animation:swing 4s infinite ease-in-out;
--webkit-transform-origin:top;
+-webkit-transform-origin: center top;
+-ms-transform-origin: center top;
+    transform-origin: center top;
 }
 .s-item4::after{
 content: "Développement de sites web et thèmes Wordpress";
@@ -1204,9 +1222,15 @@ background-repeat: no-repeat;
 background-color: rgba(153, 128, 250,0.3);
 }
 @-moz-keyframes swing{
-0%{-moz-transform:rotate(-2deg)}
-50%{-moz-transform:rotate(2deg)}
-100%{-moz-transform:rotate(-2deg)}
+0%{   -webkit-transform:rotate(-2deg);
+  -ms-transform:rotate(-2deg);
+      transform:rotate(-2deg)}
+50%{   -webkit-transform:rotate(2deg);
+  -ms-transform:rotate(2deg);
+      transform:rotate(2deg)}
+100%{   -webkit-transform:rotate(-2deg);
+  -ms-transform:rotate(-2deg);
+      transform:rotate(-2deg)}
 }
 
 /******************************** 2ème ligne des services********/
@@ -1291,9 +1315,12 @@ background-repeat: no-repeat;
 background-color: rgba(153, 128, 250,0.2);
 
 -moz-animation: 4s ease 0s normal none infinite swing;
+-webkit-animation: 4s ease 0s normal none infinite swing;
+animation: 4s ease 0s normal none infinite swing;
 -moz-transform-origin: center top;
--webkit-animation:swing 4s infinite ease-in-out;
--webkit-transform-origin:top;
+-webkit-transform-origin: center top;
+-ms-transform-origin: center top;
+    transform-origin: center top;
 }
 .s-item7::after{
 content: "Conception des états avec Jaspertsoft Ireport Designer 5.x";
