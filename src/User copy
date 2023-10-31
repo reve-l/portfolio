@@ -1,0 +1,15 @@
+import { Details } from '@mui/icons-material';
+import React, { useState, useRef, useEffect, useMemo, useCallback} from 'react';
+
+function User(){
+    return (
+
+        <>
+        <h1>Details USER<h1/>
+        
+        </>
+
+    )
+}
+
+export default User;
