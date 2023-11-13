@@ -1,0 +1,15 @@
+{
+    "users": [
+        {
+          "id": "1",
+          "email": "md40.com",
+          "prenom": "Revel",
+          "password": "2222",
+          "phone": "777888",
+          "adresse": "555YDE",
+          "country": "CMR",
+          "gender": "M"
+        }
+       
+      ]
+}

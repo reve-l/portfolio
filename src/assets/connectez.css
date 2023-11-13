@@ -189,7 +189,8 @@ margin-bottom: 2rem;}
 }
 
 .connx-s-title{
-    color: #777;
+    color: #000;
     font-family: var(--lg-font);
+    font-weight: bold;
 }
 

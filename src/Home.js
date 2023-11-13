@@ -8,7 +8,8 @@ import './assets/css/style.css';
 
 import React, { useState, useRef, useEffect, useMemo, useCallback} from 'react';
 
-import {BrowserRouter,Routes,Route, Navigate, Link} from 'react-router-dom';
+import {useNavigate, BrowserRouter,Routes,Route, Navigate, Link} from 'react-router-dom';
+import axios from "axios";
 
 
 
@@ -61,18 +62,20 @@ import { EmojiEmotions } from '@mui/icons-material';
 function Home() {
 
   //const url="http://localhost:4000/posts";
-  const url2="http://localhost:4000/users/";
+//  const url2="http://localhost:4000/users/";
+  const url2="http://localhost:4000/auth/login/";
+  const url3="http://localhost:4000/messages/";
 
   const [open, setOpen] = React.useState(false);
 
   //const initialValue = {id:"", password:""};
-  const initialValue = {id:"",email:"",password:"",password2:"",phone:"",adresse:"",country:"",gender:""};
+  const initialValue = {id:"",email:"",prenom:"",password:"",password2:"",phone:"",adresse:"",country:"",gender:""};
   const initialValuesms = {id:"",objet:"",sms:"",idUser:"",date:""}//,localisation:"",ip:""};
 
   const [tableData,setTableData]=useState(null);
-  const [currentUser,setCurrentUser]=useState("");
-  const [user,setUser]=useState(false);
-  const [errorconnect,setErrorConnect]=useState(false);
+  const [logOutUser,setLogOutUser]=useState(true);
+  const [user,setUser]=useState("");
+  const [errorconnect,setErrorConnect]=useState("");
   const [passforget,setPassForget]=useState(false);
   const [smspassforget,setSmsPassForget]=useState("");
   const [smshidepassforget,setSmsHidePassForget]=useState("");
@@ -94,6 +97,63 @@ function Home() {
 
 
   const [regist, setRegist] = useState(false);
+
+ //let history = useHistory();
+ const navigate = useNavigate();
+
+ //user qui est connecté connecté!
+ const isLoginTrue = JSON.parse(localStorage.getItem("login"));
+
+
+const handleMessage = () =>{
+//alert(formDatasms);
+  const  validationErrorssms = {};
+
+  setFormDatasms({...formDatasms,"idUser":sessionStorage.getItem("id")});
+  setFormDatasms({...formDatasms,"date":Date()});
+
+  //sessionStorage.getItem("id")
+//console.log(formDatasms)
+if(!formDatasms.objet.trim()){
+  validationErrorssms.objet="objet obligatoire"
+}else if(formDatasms.objet.length>20){
+  validationErrorssms.objet="objet très long"
+}
+
+if(!formDatasms.sms.trim()){
+  validationErrorssms.sms="message obligatoire"
+}else if(formDatasms.length<4){
+  validationErrorssms.sms="message insuffisant"
+}
+
+
+  
+setErrors(validationErrorssms);
+  
+if(Object.keys(validationErrorssms).length===0){
+
+
+  console.log(formDatasms);
+  fetch(url3,
+    {method:"POST", body:JSON.stringify(formDatasms), headers:{'content-type':"application/json"}}
+  )
+  .then(response => response.json())
+  .then(response =>{
+      console.log('formdataSMS:',formDatasms)
+   // window.sessionStorage.setItem("id", formData.id);
+    //setCurrentUser(sessionStorage.getItem("id"));
+
+      
+      //setUser(true);
+      setFormDatasms(initialValuesms)
+  })
+
+}
+
+}
+//END SEND SMS
+
+
 
 
 const HandlePassShow = () =>{
@@ -154,9 +214,9 @@ const handlePAssForget = () =>{
       if (result.isConfirmed) {
         
         //setUser(false);
-        sessionStorage.clear();
-        setUser(false);
-        setErrorConnect(false);
+        localStorage.removeItem("login")
+        setLogOutUser(true);
+        setErrorConnect("");
 
         //window.localStorage.removeItem("username");
         //window.localStorage.removeItem("isLoggedIn");
@@ -202,7 +262,8 @@ const handlePAssForget = () =>{
     //console.log(e);
     const {value,id}=e.target;
     setFormData({...formData,[id]:value});
-    //console.log(value,id); 
+    //]=
+    console.log(value,id); 
   };
 
   const onChangelist=(e)=>{
@@ -236,44 +297,51 @@ const handlePAssForget = () =>{
 
 
 
-  //const handleFormSubmit = async() => {
-    const handleFormSubmit = () => {  
-      //console.log("FORM DATA ID",formData.id)    
-      //fetch(url2+formData.username)
-      fetch(url2+`/${formData.id}`,
-        {method:"GET",headers:{'content-type':"application/json"}}
 
-        )
 
-      .then(response => response.json())
-      .then(response =>{
-        //console.log("REPONSE",response);
-        if(Object.keys(response).length===0){
-          //console.log("USER INCORRECT")
-          setErrorConnect(true);
-        }
-        else{
-          if(response.password===formData.password){
-            //console.log("PASSWORD OKAY");
-            //console.log("RESPONSE PASSWRD DATA ID",formData.id)
-            window.sessionStorage.setItem("id", formData.id);
-            setUser(true);
-            setCurrentUser(sessionStorage.getItem("id"));
-            handleClose();
-            //console.log("id", formData.id);
-          }else setErrorConnect(true)//console.log("PASSWORD INCORRECT")
-        }
+  //://////// CONNEXION USER
+    const handleLogin = () => {  
+      //console.log(formData);
+
+      axios.post(url2,formData )
+      .then(response => {
+
+        //console.log("response LOGIN:",response);
+
+        localStorage.setItem(
+          "login",
+          JSON.stringify({
+            userLogin:true,
+            username:response.data.username,
+            token:response.data.access_token
+          })
+
+        );
+
+        handleClose();
+        setLogOutUser(false);
+        //history.push("/");
+        navigate('/');
+        setErrorConnect("")
       })
-      .catch((err)=>{
-        console.log(err.message)
-      })
+      .catch((error)=>setErrorConnect(error.response.data.message)/*console.log(error)*/ )
+
   };
 //--FIN handleSubit
+const loginStorage = () => {
+  if (localStorage.hasOwnProperty("login")){
+    let value = localStorage.getItem("login");
+    try{
+      value = JSON.parse(value);
+      setUser(value);
+    }catch(e){setUser("")}
+  }
+}
 
 
-
-const handleFormSubmit2 = (e) => {
-      console.log(formData);
+const handleRegister = (e) => {
+      
+  console.log(formData);
 
 
 
@@ -337,9 +405,10 @@ const handleFormSubmit2 = (e) => {
               )
               .then(response => response.json())
               .then(response =>{
+                console.log(response)
             
-                window.sessionStorage.setItem("id", formData.id);
-                setCurrentUser(sessionStorage.getItem("id"));
+                //window.sessionStorage.setItem("id", formData.id);
+                //setCurrentUser(sessionStorage.getItem("id"));
                 
               // console.log("formdata",formData.id);
               // console.log("currentuser",currentUser);
@@ -381,7 +450,7 @@ const handleFormSubmit2 = (e) => {
 
 
 
-const handleRegister= () => {
+const handleRegisterShowHide= () => {
   setRegist(!regist)
 }
 
@@ -440,25 +509,8 @@ const handleRegister= () => {
 
     // Example load data from server
     useEffect(() => {
-     /*
-      if(user){
-        sessionStorage.setItem("id", formData.id);
-        setCurrentUser(sessionStorage.getItem("id"));
-        //console.log("currentuser useeefect",currentUser)
-      }
-*/
-
-
-      getUsers();
-      //fetch('http://localhost:4000/posts')
-      //.then(result => result.json())
-      //.then(response => response.json())
-      //.then(data=>{
-        //  gridOptions.api.setRowData(data);
-      //})
-      //.then(rowData => setRowData(rowData))
-    //}, [currentUser]);
-      }, []);
+      loginStorage();
+      }, [logOutUser]);
 
 
 
@@ -595,37 +647,40 @@ const handleRegister= () => {
 
                       <h1>Contactez moi <span>directement...</span></h1> 
                       <p>Vous pouvez m'écrire directement à l'aide du formulaire ci-dessous et je recevrai le message par notification, ou bien le faire à partir des liens sociaux à votre droite. 
-                      <p className='mt-2'>Pour m'écrire il faut se connecter,</p> pour se connecter il vous suffit de cliquer sur le bouton "se connecter"</p>
+                      Pour m'écrire il faut se connecter, pour se connecter il vous suffit de cliquer sur le bouton "se connecter"</p>
                       <p id='ctact-me'>Sinon si vous n'êtes pas encore abonné faîtes le lorsque vous cliquez sur le bouton "se connecter" ci-dessous</p>
  
-                      <p className="btn btn-info usercon">
+                      <div className="btn btn-info usercon">
                         <img src={usericonperso} alt="users" className="img-fluid"/>
 
-                      {user?<span className='user-f-c' data-title="Déconnectez-vous" onClick={logOut}>{currentUser}</span>  : <a className="conn"><span className="badge badge-light seconnect" onClick={handleClickOpen}>se connecter</span></a>
-}                     {user?<Link to={"user/"+`${formData.id}`}><span className='config-connect' data-title="modifier votre user"><FontAwesomeIcon icon={faCog} /></span></Link>:''}
+                      {!logOutUser && user.username?<span className='user-f-c' data-title="Déconnectez-vous" onClick={logOut}>{user.username}</span>  : <a className="conn"><span className="badge badge-light seconnect" onClick={handleClickOpen}>se connecter</span></a>
+}                     {!logOutUser && user.username?<Link to={"user/"+`${formData.id}`}><span className='config-connect' data-title="modifier votre user"><FontAwesomeIcon icon={faCog} /></span></Link>:''}
                         
-                        <Connectez open={open} handleClose={handleClose} data={formData} onChange={onChange} onChangelist={onChangelist} onChangephone={onChangephone} handleFormSubmit={handleFormSubmit} handleFormSubmit2={handleFormSubmit2} errorconnect={errorconnect} regist={regist} handleRegister={handleRegister} passforget={passforget} handlePAssForget={handlePAssForget} smspassforget={smspassforget} smshidepassforget={smshidepassforget} hidepassforget={hidepassforget} errors={errors} passshow={passshow} HandlePassShow={HandlePassShow} phonenumber={phonenumber}/>
+                        <Connectez open={open} handleClose={handleClose} data={formData} onChange={onChange} onChangelist={onChangelist} onChangephone={onChangephone} handleLogin={handleLogin} handleRegisterShowHide={handleRegisterShowHide} errorconnect={errorconnect} regist={regist} handleRegister={handleRegister} passforget={passforget} handlePAssForget={handlePAssForget} smspassforget={smspassforget} smshidepassforget={smshidepassforget} hidepassforget={hidepassforget} errors={errors} passshow={passshow} HandlePassShow={HandlePassShow} phonenumber={phonenumber}/>
 
-                        </p>         
-                      <form action="" className="ctact-me-form">
+                        </div>         
+                      <form className="ctact-me-form" onSubmit={()=>handleMessage(formDatasms)}>
 
 
                         <div className="_input2 text-center">
                           <input type="text" name="" id="objet" placeholder="" className="" value={formDatasms.objet} onChange={(e)=>onChangesms(e)}/>
-                          <label for="emai" className="_label">Objet</label>
+                          <label htmlFor="emai" className="_label">Objet</label>
+                          <span className='errorsms'>{errors.objet?errors.objet:''}</span>
                         </div>
 
                         <div className='text-center'>
-                          <label for="text" className="_label text-center">Message</label>
+                          <label htmlFor="text" className="_label text-center">Message</label>
                           
                           <textarea name="sms" id="sms" cols="30" rows="10" value={formDatasms.sms} onChange={(e)=>onChangesms(e)} />
+                          <span className='errorsms'>{errors.sms?errors.sms:''}</span>
+
                           
                           <div>
-                            <button className={user?"send-ctact-btn":"not-send-ctact-btn"} data-title={user?"Envoyer message":"Connectez-vous d'abord"} disabled={user?false:true}>Envoyer</button>
+                            <button type="submit" className={!logOutUser && user.username?"send-ctact-btn":"not-send-ctact-btn"} data-title={user?"Envoyer message":"Connectez-vous d'abord"} disabled={!logOutUser && user.username?false:true} >Envoyer</button>
                           </div>
                         </div>            
                       </form>
-
+                      {!logOutUser && user.username?<Link to={"messages"}>messages</Link>:''}
                     </article>
                     <div className="col ctact-me-c"> 
                       <p> &nbsp; J'attend... &nbsp;  <FontAwesomeIcon icon={faCoffee} className=''/></p>
@@ -768,7 +823,7 @@ const handleRegister= () => {
  <div className='mb-5 mt-5'> </div>
 
               <footer className="pied mt-5">
-              {user?<span className='user-f badge badge-info' data-title='Déconnectez-vous' onClick={logOut}>{currentUser}</span>  :""}
+              {!logOutUser && user.username?<span className='user-f badge badge-info' data-title='Déconnectez-vous' onClick={logOut}>{user.username}</span>  :""}
                 <small>&copy; 2014 - revel - portfolio</small>
               </footer>
 

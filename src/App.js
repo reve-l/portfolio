@@ -2,8 +2,10 @@
 //import './App.css';
 
 import Home from './Home';
+import MessageList from './MessageList';
 import Missing from './Missing';
 import User from './User';
+
 
 import {BrowserRouter,Routes,Route, Navigate} from 'react-router-dom';
 
@@ -17,6 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           {/*<Route path="presentation1" element={<Car />} />*/}
           <Route path="user/:id" element={<User/>} />
+          <Route path="messages" element={<MessageList/>} />
+
           <Route path="*" element={<Missing />} />
       </Routes>
     </div>
