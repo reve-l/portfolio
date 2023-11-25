@@ -2,6 +2,7 @@
   "name": "revel",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/reve-l/portfolio",
   "dependencies": {
     "@emoji-mart/data": "^1.1.2",
     "@emoji-mart/react": "^1.1.1",
@@ -41,7 +42,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -62,6 +65,7 @@
     ]
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.22"
+    "@types/jquery": "^3.5.22",
+    "gh-pages": "^6.1.0"
   }
 }
