@@ -2,7 +2,7 @@
   "name": "revel",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://reve-l.github.io/me",
+  "homepage": "https://reve-l.github.io/portfolio",
   "dependencies": {
     "@emoji-mart/data": "^1.1.2",
     "@emoji-mart/react": "^1.1.1",
