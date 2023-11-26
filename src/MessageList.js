@@ -43,7 +43,7 @@ function MessageList() {
             {
                 smsList && setSmsList.map((message,index)=>(
                     <li>
-                        {mess}
+                        {/*mess*/}
                     </li>
                 ))
             }
